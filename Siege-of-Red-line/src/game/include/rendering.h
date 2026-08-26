@@ -7,3 +7,8 @@
 #include <string>
 #include <algorithm>
 
+// need to link imgui and sfml
+
+class screen_rendering {
+
+};

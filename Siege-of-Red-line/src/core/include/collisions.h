@@ -7,3 +7,24 @@
 #include <string>
 #include <algorithm>
 
+class projectile_impact {
+public:
+
+private:
+
+};
+
+class impact_radius {
+public:
+
+private:
+
+};
+
+class obstacle_interaction {
+public:
+
+private:
+
+};
+
