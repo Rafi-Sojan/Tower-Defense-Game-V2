@@ -37,6 +37,7 @@ private:
 class castle_behaviour {
 public:
 	bool checkcastledefensesdown;
+	bool checkcastledestroyed;
 
 private:
 

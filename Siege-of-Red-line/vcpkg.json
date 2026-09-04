@@ -1,0 +1,12 @@
+{
+    "name": "siege-of-red-line",
+    "version-string": "0.1.0",
+    "dependencies": [
+        "glfw3",
+        "freeglut",
+        "glm",
+        "sfml",
+        "imgui",
+        "glad"
+    ]
+}

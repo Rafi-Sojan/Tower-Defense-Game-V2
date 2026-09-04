@@ -39,6 +39,30 @@ private:
 
 };
 
+class archers {
+public:
 
+private:
 
+};
 
+class soldiers {
+public:
+
+private:
+
+};
+
+class tanks {
+public:
+
+private:
+
+};
+
+class aerial_bombers {
+public:
+
+private:
+
+};
