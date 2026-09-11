@@ -25,6 +25,12 @@ add_executable (Siege-of-Red-line
     src/game/src/main.cpp
  "src/core/include/collisions.h" "src/core/include/rendering.h" "src/core/include/behaviour.h" "src/core/include/entities.h" "src/core/src/collision.cpp" "src/core/src/rendering.cpp" "src/core/src/entities.cpp" "src/core/src/behaviour.cpp" "src/game/include/main-screen.h" "src/game/include/rendering.h" "src/game/include/ui.h" "src/game/src/rendering.cpp" "src/game/src/ui.cpp" "libraries/xfimathlib.h")
 
+ add_custom_command(TARGET Siege-of-Red-line POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    "${CMAKE_CURRENT_SOURCE_DIR}/assets"
+    "$<TARGET_FILE_DIR:Siege-of-Red-line>/assets"
+)
+
 set(GLSL_SHADER_FILES
     shaders/basic.vert
     shaders/basic.frag
