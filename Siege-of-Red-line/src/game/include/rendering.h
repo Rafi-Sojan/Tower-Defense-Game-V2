@@ -12,3 +12,12 @@
 class screen_rendering {
 
 };
+
+class camera {
+	struct modes {
+		bool rotate;
+		bool zoomin;
+		bool zoomout;
+
+	};
+};

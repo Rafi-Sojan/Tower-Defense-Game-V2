@@ -30,7 +30,7 @@ public:
 
 protected:
 	tower_attributes attributes;
-	
+	sprites_animations animations;
 };
 
 // will start witha archer tower and later think about other towers
