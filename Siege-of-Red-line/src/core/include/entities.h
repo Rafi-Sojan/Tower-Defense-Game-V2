@@ -11,6 +11,7 @@ class tower {
 public:
 	struct tower_attributes {
 		std::string type;
+		std::string element;
 		float cost;
 		float radius;
 		float damage;
@@ -38,6 +39,7 @@ class archer_tower : public tower {
 public:
 	archer_tower() {
 		attributes.type = "archer tower";
+		attributes.element = "normal";
 		attributes.cost = 100.0;
 		attributes.damage = 20.0;
 		attributes.radius = 10.0;
@@ -47,6 +49,40 @@ public:
 		attributes.projectile = 1;
 		attributes.projectilespeed = 1.5;
 		attributes.upgrades = { {150 , 0} , {200 , 1}, {250 , 2} , {300 , 3} , {350 , 4} }; // initially let there be 5 upgrades and 5 variants 
+	}
+};
+
+class lightning_tower : public tower {
+public:
+	lightning_tower() {
+		attributes.type = "lightning tower";
+		attributes.element = "electric";
+		attributes.cost = 150.0;
+		attributes.damage = 40.0;
+		attributes.radius = 10.0;
+		attributes.health = 100.0;
+		attributes.defense = 20.0;
+		attributes.delay = 2.5;
+		attributes.projectile = 3;
+		attributes.projectilespeed = 2.5;
+		attributes.upgrades = { {200, 0}, {300, 1}, {400, 2} };
+	}
+};
+
+class fire_tower : public tower {
+public:
+	fire_tower() {
+		attributes.type = "fire tower";
+		attributes.element = "fire";
+		attributes.cost = 200.0;
+		attributes.damage = 40.0;
+		attributes.radius = 10.0;
+		attributes.health = 100.0;
+		attributes.defense = 20.0;
+		attributes.delay = 3;
+		attributes.projectile = 1;
+		attributes.projectilespeed = 3;
+		attributes.upgrades = { {200, 0}, {300, 1}, {400, 2} };
 	}
 };
 
@@ -72,16 +108,31 @@ protected:
 
 };
 
-class goblin : enemies {
+class Kirby : enemies {
 public:
-	goblin() {
-		attributes.type = "goblin";
+	Kirby() {
+		attributes.type = "Kirby";
 		attributes.defense = 5;
 		attributes.health = 50;
 		attributes.speed = 1;
-		attributes.attack = 5;
+		attributes.attack = 2; // kirby initially without a power up is weak
+		attributes.attribute_multiplier = 4;
+		attributes.variants = { 0, 1, 2 }; // adding variants so that they have different sprites upon crossing a threshold level with upgraded attributes
+		
+		// knife size increases and kirby may get a armor restricting to 3 variants
+	}
+};
+
+class MetaKnight : enemies {
+public:
+	MetaKnight() {
+		attributes.type = "MetaKnight";
+		attributes.defense = 20;
+		attributes.health = 60;
+		attributes.speed = 2;
+		attributes.attack = 10;
 		attributes.attribute_multiplier = 2.5;
-		attributes.variants = { 0, 1, 2, 3, 4 }; // adding variants so that they have different sprites upon crossing a threshold level with upgraded attributes
+		attributes.variants = { 0, 1 };
 	}
 };
 
