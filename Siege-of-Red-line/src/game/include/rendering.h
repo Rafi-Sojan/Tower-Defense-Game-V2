@@ -18,6 +18,6 @@ class camera {
 		bool rotate;
 		bool zoomin;
 		bool zoomout;
-
+		bool cameraenabled;
 	};
 };
