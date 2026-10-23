@@ -17,7 +17,7 @@ struct objects {
 
 class animations {
 public:
-
+	std::unordered_map<unsigned int, int> animationid = {}; // first = animationid, second = key id of the animation whether it is run or jump or attack or reload
 private:
 
 };
